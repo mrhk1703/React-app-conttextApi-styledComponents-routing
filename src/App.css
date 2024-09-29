@@ -1,23 +1,54 @@
 .App {
   text-align: center;
 }
-
+.header {
+  height: 60px;
+  background-color: rgb(89, 0, 223);
+}
+.menuIcon {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+.menuIcon:hover {
+  background-color: rgba(0, 0, 0, 0.303);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 1000ms;
+}
 nav {
-  background-color: rgb(233, 171, 0);
-  display: flex;
-  position: sticky;
-  top: 0;
+  background-color: rgb(89, 0, 223);
+  display: block;
+  position: fixed;
+  min-width: 250px;
+  top: 60px;
+  height: 100vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+  clip-path: inset(0px -15px 0px 0px);
   overflow: hidden;
 }
-nav a{
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 20px;
-  padding: 10px 20px;
+nav ul {
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
 }
-nav a:hover{
-  background-color: rgba(255, 255, 255, 0.309);
+
+nav ul li {
+  cursor: pointer;
+}
+nav a {
+  padding: 16px 24px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  display: block;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.309);
+  transition: 1000ms;
+}
+li.active {
+  background-color: rgba(0, 0, 0, 0.309);
 }
 @keyframes App-logo-spin {
   from {
